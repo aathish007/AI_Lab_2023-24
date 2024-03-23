@@ -1,6 +1,6 @@
 # Ex.No: 10  Logic Programming –  Simple queries from facts and rules
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 09/03/2024                                                                           
+### REGISTER NUMBER : 212221040002
 ### AIM: 
 To write a prolog program to find the answer of query. 
 ###  Algorithm:
@@ -22,20 +22,20 @@ Construct the FOL representation for the following sentences <br>
    Convert into clause form and Prove that John like Apple by using Prolog. <br> 
 ### Program:
 ```
-likes(mani,X):-easygame(X).
-indoorgame(tabletennis).
-easygame(X):-indoorgame(X).
-hard(boxing).
-likes(john,X):-food(X).
-food(apple).
-food(vegetable).
-eats(bill,peanuts).
-eats(sue,X):-eats(bill,X).
-alive(bill).
+likes(john,X):- 
+ food(X). 
+eats(bill,X):- 
+ eats(sue,X). 
+eats(Y,X):- 
+ food(X). 
+eats(bill,peanuts). 
+food(apple). 
+food(chicken). 
+food(peanuts).
 ```
 
 ### Output:
-![john-ai](https://github.com/dyanesh-100/AI_Lab_2023-24/assets/114641798/991c073c-2cb6-4cf7-a643-c0d525e6afaf)
+![image](https://github.com/ManiKandan228/AI_Lab_2023-24/assets/119160414/2bf591e5-1f78-46ff-ab05-9eb5a5bad327)
 
 ### Task 2:
 Consider the following facts and represent them in predicate form: <br>              
@@ -47,16 +47,16 @@ Convert the facts in predicate form to clauses and then prove by resolution: “
 
 ### Program:
 ```
-likes(steve,X):-
-     easycourse(X).
-hard(sciencecourse).
-easycourse(X):-
-          course(X,dept(havefun)).
+likes(steve,X):- 
+ easycourse(X). 
+hard(sciencecourse). 
+easycourse(X):- 
+ course(X,dept(havefun)). 
 course(bk301,dept(havefun)).
 ```
 
 ### Output:
-![steve-ai](https://github.com/dyanesh-100/AI_Lab_2023-24/assets/114641798/2f84b624-31e7-4e52-853e-ca0ec0a4d56d)
+![image](https://github.com/ManiKandan228/AI_Lab_2023-24/assets/119160414/34982339-4d5f-4a84-9032-4f9791861c95)
 
 ### Task 3:
 Consider the statement <br> 
@@ -85,8 +85,8 @@ american(west).
 ```
 
 ### Output:
-![criminal-ai](https://github.com/dyanesh-100/AI_Lab_2023-24/assets/114641798/fca30768-afdc-418a-85cf-ff84a8f6d7d2)
 
+![image](https://github.com/ManiKandan228/AI_Lab_2023-24/assets/119160414/d375a33c-8161-4bba-9daa-13de2cb2637e)
 
 ### Result:
 Thus the prolog programs were executed successfully and the answer of query was found.
